@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(257, 40%, 49%);
+    color: white;
+    
+}
+.logo{
+    position: relative;
+    left: 10%;
+    margin-top: 3em;
+    
+}
+.wrapper{
+    display: grid;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    grid-template-columns: 1fr 1fr;
+
+}
+.image{
+    height: 500px;
+
+}
+.ill{
+    height: 600px;
+}
+.title, .par, .btn {
+    position: relative;
+    left: 10%;
+}
+.title{
+    font-family: Poppins;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    width: 500px;
+    line-height: 3.5rem;
+    font-weight: 600;
+    top: 10%;
+}
+.par{
+    font-family: "Open Sans";
+    top: 18%;
+    font-size: 1.4rem;
+    width: 640px;
+    font-weight: 300;
+    line-height: 1.9rem;
+}
+.btn{
+    top: 27%;
+    width: 250px;
+    height: 66px;
+    border-radius: 33px;
+    border: none;
+    font-size: 1.3rem;
+    color: hsl(257, 40%, 49%);
+    box-shadow: 0 5px 15px rgba(61, 61, 61, 0.562);
+}
+.btn:hover{
+    background-color: hsl(300, 69%, 71%);
+    color: white; 
+}
+@media screen and (max-width: 1300px) {
+    body{
+        background-image: url(images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .logo{
+        width: 200px;
+    }
+    .wrapper{
+        display: grid;
+        grid-template-areas: 
+        "l"
+        "r";
+    }
+    .image{
+        align-self: center;
+        grid-area: l;
+        width: 350px;
+    }
+    .ill{
+        width: 350px;
+        height: 270px;
+        position: relative;
+        top: 20%;
+    }
+    .text{
+        grid-area: r;
+    }
+    .title{
+        font-size: 2rem;
+        width: 400px;
+        text-align: center;
+        left: -4%;
+        top: -20%;
+    }
+    .par{
+        text-align: center;
+        left: -2%;
+        top: -10%;
+        width: 380px;
+        font-size: 1.3rem;
+    }
+    .btn{
+        top: 2%;
+        left: 15%;
+    }
+}
